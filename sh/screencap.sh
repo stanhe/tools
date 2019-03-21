@@ -1,7 +1,7 @@
 #!/bin/bash
 INDEX=`adb shell ls mnt/sdcard/screencaps |wc -l`
 NAME="pic$INDEX.png"
-echo $NAME
-echo $PWD
-`adb shell screencap -p mnt/sdcard/screencaps/$NAME`
-`adb pull mnt/sdcard/screencaps/$NAME $PWD/$NAME`
+LOCAL_PATH="mnt/sdcard/screencaps/$NAME"
+`adb shell screencap -p $LOCAL_PATH`
+echo "screencap : $LOCAL_PATH"
+`adb pull $LOCAL_PATH $PWD/$NAME`
