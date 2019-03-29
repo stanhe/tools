@@ -9,6 +9,7 @@
     #+BEGIN_SRC shell
     adb shell mkdir mnt/sdcard/screencaps
     #+END_SRC
+
     2. run in local folder
     #+BEGIN_SRC shell
     ./.screencap.sh
