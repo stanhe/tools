@@ -1,7 +1,7 @@
 * SHell TOOLS
  
 
-** screencap.sh 
+** .screencap.sh 
    adb screencap
 
 *** usage
@@ -11,6 +11,12 @@
     #+END_SRC
     2. run in local folder
     #+BEGIN_SRC shell
-    ./screencap.sh
+    ./.screencap.sh
     #+END_SRC
        
+** .rename.sh 
+   rename files name.eg: pic1,pic2,pic3... in a folder to img1,img2,img3...
+   run in local folder
+   #+BEGIN_SRC shell
+   ./.rename.sh img
+   #+END_SRC

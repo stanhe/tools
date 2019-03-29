@@ -1,3 +1,7 @@
 * TOOLS
 ** sh 
-   shell script
+   shell scripts
+
+*** adb screencap
+ 
+*** rename
