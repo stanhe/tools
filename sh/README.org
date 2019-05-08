@@ -21,3 +21,10 @@
    #+BEGIN_SRC shell
    ./.rename.sh img
    #+END_SRC
+
+   
+** .cadb.sh 
+   auto connect adb devices which already connected to win10 hotspot.
+   #+BEGIN_SRC emacs-lisp 
+   ./.cadb.sh
+   #+END_SRC
