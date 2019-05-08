@@ -1,4 +1,7 @@
 #!/bin/bash
+#author: stanhe
+#usage: adb 截屏并保存到当前文件夹下
+
 INDEX=`adb shell ls mnt/sdcard/screencaps |wc -l`
 NAME="pic$INDEX.png"
 LOCAL_PATH="mnt/sdcard/screencaps/$NAME"
