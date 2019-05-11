@@ -2,6 +2,8 @@
 ** sh 
    shell scripts
 
-*** adb screencap
+*** [screencap](./sh/.screencap.sh)
  
-*** rename
+*** [rename](./sh/.rename.sh)
+
+*** [cadb](./sh/cadb.sh)
