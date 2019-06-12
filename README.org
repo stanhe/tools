@@ -1,6 +1,5 @@
-* SHell TOOLS
+* TOOLS
  
-
 ** .screencap.sh 
    adb screencap
 
@@ -17,9 +16,18 @@
    ./.rename.sh img
    #+END_SRC
 
-   
 ** .cadb.sh 
    auto connect adb devices which already connected to win10 hotspot.
    #+BEGIN_SRC emacs-lisp 
    ./.cadb.sh
    #+END_SRC
+
+** .pull.py
+   pull android device database to desk.
+  #+BEGIN_SRC emacs-lisp 
+  .pull com.mc.vending db1
+#+END_SRC
+
+
+
+
