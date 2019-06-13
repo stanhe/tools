@@ -31,3 +31,10 @@
 
 
 
+
+** .click.py
+   click right top for refresh with `ctrl+r`
+   #+BEGIN_SRC emacs-lisp 
+   .click.py arg -> get location.
+   .click.py -> refresh location.
+#+END_SRC
