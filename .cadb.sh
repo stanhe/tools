@@ -19,7 +19,7 @@ set_connect(){
 }
 if [ $1 ];
 then
-    CONNECT=192.168.137.$1
+    CONNECT=192.168.137.$1:5555
 else
     set_connect
 fi
