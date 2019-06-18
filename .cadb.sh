@@ -12,7 +12,7 @@ set_connect(){
     do
 	CURRENT=${INPUT[i]}
 	if [[ $CURRENT =~ $PREFIX([2-9]|[1-8][0-9]|9[0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-4]) && $CURRENT != $LOCAL ]];then
-	    CONNECT=$CURRENT
+	    CONNECT=$CURRENT:5555
 	    break
 	fi
     done
