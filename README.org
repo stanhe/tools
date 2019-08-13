@@ -10,10 +10,12 @@
     #+END_SRC
        
 ** .rename.sh 
-   rename files name.eg: pic1,pic2,pic3... in a folder to img1,img2,img3...
+   1. rename files name.eg: pic1,pic2,pic3... in a folder to img1,img2,img3...
+   2. or rename my-name-1,my-name-2,my-name-3 to name-1,name-2,name-3
    run in local folder
    #+BEGIN_SRC shell
    ./.rename.sh img
+   .rename.py my- ''
    #+END_SRC
 
 ** .cadb.sh 
