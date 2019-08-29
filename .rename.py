@@ -1,6 +1,7 @@
 #!python
 # -*- coding: utf-8 -*-
 # rename arg1 to arg2 with replace
+# 替换文件名
 
 import os
 import sys

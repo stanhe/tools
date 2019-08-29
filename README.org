@@ -9,6 +9,7 @@
     ./.screencap.sh
     #+END_SRC
        
+
 ** .rename.sh 
    1. rename files name.eg: pic1,pic2,pic3... in a folder to img1,img2,img3...
    2. or rename my-name-1,my-name-2,my-name-3 to name-1,name-2,name-3
@@ -18,11 +19,20 @@
    .rename.py my- ''
    #+END_SRC
 
+   
+** .rename.py
+   1.rename files name. eg: spring_test.png,spring2_test.png to spring_release.png,spring2_release.png
+   #+BEGIN_SRC emacs-lisp shell
+   .rename.py test release
+#+END_SRC
+
+
 ** .cadb.sh 
    auto connect adb devices which already connected to win10 hotspot.
    #+BEGIN_SRC emacs-lisp 
    ./.cadb.sh
    #+END_SRC
+
 
 ** .pull.py
    pull android device database to desk.
@@ -39,4 +49,17 @@
    #+BEGIN_SRC emacs-lisp 
    .click.py arg -> get location.
    .click.py -> refresh location.
+#+END_SRC
+
+
+** .head.py
+   append head if head not same. eg: t1.txt, t2.txt,x1xt3.txt to x1xt1.txt,x1xt2.txt,x1xt3.txt
+   #+BEGIN_SRC emacs-lisp shell
+   .head.py x1x 
+#+END_SRC
+
+** .qrcode.sh
+   create qrcode
+   #+BEGIN_SRC shell
+   .qrcode.sh 'stanhe.github.io'
 #+END_SRC
