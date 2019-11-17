@@ -1,10 +1,10 @@
 #!/bin/bash
 #author: stanhe
-#usage: adb 鎴睆骞朵繚瀛樺埌褰撳墠鏂囦欢澶逛笅
+#usage: adb 截屏并保存到当前文件夹下
 
 
 if [ -z "$1" ];then
-   echo "璇峰甫鍙傛暟--> 鏁版嵁搴撳悕绉帮紒"
+   echo "请带参数--> 数据库名称！"
    exit 0
 fi
 
@@ -18,16 +18,16 @@ EOF`
 
 while :
 do
-    echo -e "\n璇疯緭鍏ユ暟鎹簱鎿嶄綔鎸囦护锛歕n"
+    echo -e "\n请输入数据库操作指令：\n"
     read cmd
     case $cmd in
 	eof|EOF|q|exit)
-	    echo -e "\n閫�鍑猴紒\n"
+	    echo -e "\n退出！\n"
 	break
 	;;
 	*)
 	    runCmd "$cmd"
-	    echo -e "\n鎸囦护杩斿洖======> \n$dbBack\n"
+	    echo -e "\n指令返回======> \n$dbBack\n"
 	;;
     esac
 done
