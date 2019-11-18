@@ -41,6 +41,11 @@ while 1:
         result=showTb(dbName)
         if result!=None:
             print(result,"\n")
+    elif cmd.startswith('info'):
+        cmd = "Pragma table_info({})".format(cmd.split()[1])
+        result=runDb(dbName,cmd)
+        if result!=None:
+            print(result,"\n")
     else:
         result=runDb(dbName,cmd)
         if result!=None:

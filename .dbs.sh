@@ -1,7 +1,5 @@
 #!/bin/bash
 #author: stanhe
-#usage: adb 截屏并保存到当前文件夹下
-
 
 if [ -z "$1" ];then
    echo "请带参数--> 数据库名称！"
@@ -21,7 +19,13 @@ do
     echo -e "\n请输入数据库操作指令：\n"
     read cmd
     case $cmd in
-	eof|EOF|q|exit)
+	info*)
+	    table=$(echo -e "$cmd"|awk '{print $2}')
+	    runCmd "Pragma table_info($table)"
+	    #count=$(echo -e "$dbBack"|wc -l)
+	    echo -e "$dbBack"|awk -F '|' '{printf("%s(%s) ",$2,$3)}'|awk '{print}'
+	;;
+	q|exit)
 	    echo -e "\n退出！\n"
 	break
 	;;
