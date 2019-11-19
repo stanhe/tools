@@ -37,16 +37,25 @@ while 1:
     cmd = input("\n===> 数据库指令: \n")
     if cmd == 'q':
         sys.exit()
-    elif cmd == '.tables':
+    elif (cmd == 'tab' or cmd == '.tables' or cmd == '.tab'):
         result=showTb(dbName)
         if result!=None:
-            print(result,"\n")
+            table="Tables===> \n"
+            for i in range(len(result)):
+                if i%7 == 0:
+                    table+="{} \n".format(result[i][0])
+                else:
+                    table+="{} ".format(result[i][0])
+            print(table,"\n")
     elif cmd.startswith('info'):
         try:
             cmd = "Pragma table_info({})".format(cmd.split()[1])
             result=runDb(dbName,cmd)
             if result!=None:
-                print(result,"\n")
+                table="表字段===> \n"
+                for i in result:
+                    table+="{}({}) ".format(i[1],i[2])
+                print(table,"\n")
         except IndexError:
             print("Index Error!")
     else:
