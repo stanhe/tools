@@ -42,10 +42,13 @@ while 1:
         if result!=None:
             print(result,"\n")
     elif cmd.startswith('info'):
-        cmd = "Pragma table_info({})".format(cmd.split()[1])
-        result=runDb(dbName,cmd)
-        if result!=None:
-            print(result,"\n")
+        try:
+            cmd = "Pragma table_info({})".format(cmd.split()[1])
+            result=runDb(dbName,cmd)
+            if result!=None:
+                print(result,"\n")
+        except IndexError:
+            print("Index Error!")
     else:
         result=runDb(dbName,cmd)
         if result!=None:
