@@ -40,21 +40,37 @@ while 1:
     elif (cmd == 'tab' or cmd == '.tables' or cmd == '.tab'):
         result=showTb(dbName)
         if result!=None:
-            table="Tables===> \n"
+            table="Tables===>: \n"
             for i in range(len(result)):
-                if i%7 == 0:
-                    table+="{} \n".format(result[i][0])
+                j = i+1
+                if (j%4 == 0):
+                    info="{} \n".format(result[i][0])
+                    info.strip()
+                    info=f'{info:>30}'
                 else:
-                    table+="{} ".format(result[i][0])
+                    info="{} ".format(result[i][0])
+                    info.strip()
+                    info=f'{info:>30}|'
+                table+=info
             print(table,"\n")
     elif cmd.startswith('info'):
         try:
             cmd = "Pragma table_info({})".format(cmd.split()[1])
             result=runDb(dbName,cmd)
             if result!=None:
-                table="表字段===> \n"
-                for i in result:
-                    table+="{}({}) ".format(i[1],i[2])
+                table="表字段===>: \n"
+                for i in range(len(result)):
+                    j = i+1
+                    if (j%4 == 0):
+                        info = "{}({}) \n".format(result[i][1],result[i][2])
+                        info.strip()
+                        info=f'{info:>30}'
+                    else:
+                        info = "{}({}) ".format(result[i][1],result[i][2])
+                        info.strip()
+                        info=f'{info:>30}|'
+                    table.strip()
+                    table+=info
                 print(table,"\n")
         except IndexError:
             print("Index Error!")
