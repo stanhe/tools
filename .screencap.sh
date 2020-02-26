@@ -3,7 +3,7 @@
 #usage: adb 截屏并保存到当前文件夹下
 
 createFolder(){
-    FOLDER=`adb shell ls mnt/sdcard | grep screencaps`
+    FOLDER=`adb shell ls mnt/sdcard/ | grep screencaps`
     if [ ! $FOLDER ];
     then
 	adb shell mkdir mnt/sdcard/screencaps
@@ -11,7 +11,7 @@ createFolder(){
     fi
 }
 startCap(){
-    INDEX=`adb shell ls mnt/sdcard/screencaps |wc -l`
+    INDEX=`adb shell ls mnt/sdcard/screencaps/ |wc -l`
     NAME="pic$INDEX.png"
     LOCAL_PATH="mnt/sdcard/screencaps/$NAME"
     `adb shell screencap -p $LOCAL_PATH`
