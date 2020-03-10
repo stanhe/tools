@@ -47,13 +47,14 @@ checkoutMaster(){
 };func'
 
 #================= custom alias =====================
+alias q='exit'
 alias test='my_test'
 alias t1='test1'
 alias la='ls -lsah'
 alias gaa='git add .'
 alias gii='git init'
 alias gst='git status'
-alias gstash='git stash'
+alias gsh='git stash'
 alias gd='git diff'
 alias gb='git branch'
 alias gbs='gb && gsf gb'
