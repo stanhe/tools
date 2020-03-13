@@ -1,3 +1,6 @@
+if [ -n "$INSIDE_EMACS" ]; then
+    export PS1='\[\033[32m\]\u@\h \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ '
+fi
 #echo "$(date +"%Y-%m-%d %T %N") Init .bashrc start! "
 alias function='func(){
 #================= alias function start =====================
@@ -75,7 +78,7 @@ alias gsu='git submodule update '
 alias gff='gf && gsf gf'
 alias gci='git commit' 
 alias grh='git reset --hard ' 
-alias ggrep='git grep' 
+alias ggrep='git grep -n ' 
 alias p2m='adb push ./log mnt/sdcard/log && adb push ./db_kt.sqlite mnt/sdcard/ktsmart/db/db_kt.sqlite'
 alias dfm='adb shell rm mnt/sdcard/log && adb shell rm -rf mnt/sdcard/ktsmart/db'
 alias adbi='adb shell input text' # action input
