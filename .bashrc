@@ -27,8 +27,14 @@ my_test(){
 test1(){
 	echo "test1";
 };
-# checkout new branch for current and submodules.
+# switch branch for current and submodules.
 checkoutSub(){
+	echo "switch $1 ...";
+	gck $1 && gsf gck $1;
+	echo "===end===";
+};
+# checkout new branch for current and submodules.
+checkoutNewSub(){
 	echo "Create $1 ...";
 	gck -b $1 && gsf gck -b $1;
 	echo "===end===";
@@ -70,6 +76,7 @@ alias gl='git lg'
 alias gck='git checkout'
 alias gckm='git checkout master'
 alias gcks='checkoutSub'
+alias gckbs='checkoutNewSub'
 alias gbds='deleteBranch'
 alias gcksm='checkoutMaster'
 #alias gcksm='gckm && gsf gckm'
