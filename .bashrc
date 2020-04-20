@@ -87,6 +87,7 @@ alias gci='git commit'
 alias grh='git reset --hard ' 
 alias ggrep='git grep -n ' 
 alias p2m='adb push ./log mnt/sdcard/log && adb push ./db_kt.sqlite mnt/sdcard/ktsmart/db/db_kt.sqlite'
+alias pfm='adb pull mnt/sdcard/ktsmart/db/db_data.sqlite ./'
 alias dfm='adb shell rm mnt/sdcard/log && adb shell rm -rf mnt/sdcard/ktsmart/db'
 alias adbi='adb shell input text' # action input
 alias adbh='adb shell input keyevent 3' # action home
