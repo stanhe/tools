@@ -110,6 +110,7 @@ alias adbk='adb shell kill '
 alias adbbc='adb shell am broadcast -a ' # eg: adb shell am broadcast -a com.android.test --es test_string “this is test string” --ei test_int 100 --ez test_boolean true
 alias adbsa='adb shell am start -n ' # start activity pkg/.activity
 alias alg='adb logcat | grep --color=auto ' #adb logcat grep file
+alias mcd='source mcd.sh'
 
 function
 #echo "$(date +"%Y-%m-%d %T %N") Init .bashrc end! "
