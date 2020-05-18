@@ -6,7 +6,7 @@
 # 2 "..path2"
 # 3 "..path3"
 
-MCD_PATH="C:/Users/stan/Software/tools/.mcd_path"
+MCD_PATH="C:/Users/`whoami`/tools/.mcd_path"
 if [ -z "$1" ];
 then
     echo -e "===> list custom path : $MCD_PATH"
