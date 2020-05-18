@@ -113,4 +113,6 @@ alias alg='adb logcat | grep --color=auto ' #adb logcat grep file
 alias mcd='source mcd.sh'
 
 function
+
+source c:/users/`whoami`/.stanho.sh
 #echo "$(date +"%Y-%m-%d %T %N") Init .bashrc end! "
