@@ -6,7 +6,13 @@
 # 2 "..path2"
 # 3 "..path3"
 
-MCD_PATH="C:/Users/`whoami`/tools/.mcd_path"
+MCD_PATH_0="C:/Users/`whoami`/software/tools/.mcd_path"
+MCD_PATH_1="C:/Users/`whoami`/tools/.mcd_path"
+if [ -e $MCD_PATH_0 ];then
+	MCD_PATH=$MCD_PATH_0
+elif [ -e $MCD_PATH_1 ];then
+	MCD_PATH=$MCD_PATH_1
+fi
 arr=()
 if [ -e $MCD_PATH ];then
 echo -e "===> list custom path : $MCD_PATH"
