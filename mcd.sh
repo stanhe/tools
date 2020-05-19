@@ -18,9 +18,12 @@ echo -e "===> list custom path : $MCD_PATH"
 cat $MCD_PATH
 echo -e "\n===> how to use? \n \".1\" to use dir 1 \n \"mcdt\" to change to today's test dir! \n \"start .\" to open current dir!"
 # alias logic
+if [ ${#MAPFILE[@]} == 0 ];then
+echo "===> alias maped!"
 myAlias(){
 	strArr=($2)
     	alias ".${strArr[0]}"="cd ${strArr[1]}"
 }
 mapfile -t -c 1 -C "myAlias" < $MCD_PATH # file lines to array
+fi
 fi
