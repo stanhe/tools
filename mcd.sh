@@ -13,15 +13,14 @@ if [ -e $MCD_PATH_0 ];then
 elif [ -e $MCD_PATH_1 ];then
 	MCD_PATH=$MCD_PATH_1
 fi
-arr=()
 if [ -e $MCD_PATH ];then
 echo -e "===> list custom path : $MCD_PATH"
 cat $MCD_PATH
 echo -e "\n===> how to use? \n \".1\" to use dir 1 \n \"mcdt\" to change to today's test dir! \n \"start .\" to open current dir!"
-mapfile -t arr < $MCD_PATH # file lines to array
-for i in ${!arr[@]}
-do
-    strArray=(${arr[i]}) #string to stringArray
-    alias ".${strArray[0]}"="cd ${strArray[1]}"
-done
+# alias logic
+myAlias(){
+	strArr=($2)
+    	alias ".${strArr[0]}"="cd ${strArr[1]}"
+}
+mapfile -t -c 1 -C "myAlias" < $MCD_PATH # file lines to array
 fi
