@@ -112,6 +112,7 @@ alias adbsa='adb shell am start -n ' # start activity pkg/.activity
 alias alg='adb logcat | grep --color=auto ' #adb logcat grep file
 alias mcd='source mcd.sh'
 alias s.="start ."
+alias gr='go run '
 
 function
 
